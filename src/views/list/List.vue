@@ -1,11 +1,13 @@
 <template>
   <div>
-    <router-link to="/list">列表</router-link>
+    列表
   </div>
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: "list"
+  };
 </script>
 
 <style scoped>
