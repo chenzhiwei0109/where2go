@@ -22,7 +22,15 @@
 
   .header {
     line-height: 0.86rem;
-    background: #fff;
+    background-color: red; /* 浏览器不支持的时候显示 */
+    background-image: linear-gradient(
+      100deg,
+      rgb(243, 171, 123),
+      $bgColor,
+      $bgNewColor,
+      rgb(69, 95, 245)
+    );
+    box-shadow: 0 4px 4px 1px $bgNewColor;
     display: flex;
     white-space: nowrap;
     &-left {
@@ -34,9 +42,12 @@
       padding-left: 0.2rem;
       background: #eee;
       border-radius: 0.1rem;
-      color: #b0b0b0;
+      color: $bgNewColor;
+      font-size: 0.25rem;
+
       i {
         margin-right: 0.1rem;
+        font-size: 0.23rem;
       }
     }
 
@@ -45,8 +56,8 @@
       padding: 0 0.1rem;
       float: right;
       text-align: center;
-      color: $bgColor;
-      
+      color: #fff;
+
       .iconsanjiaojiantoutriangular {
         margin-left: -0.04rem;
         font-size: 0.23rem;
