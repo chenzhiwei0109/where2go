@@ -20,12 +20,10 @@
           slidesPerView: 4, //一行几个
           slidesPerColumn: 2,
           slidesPerColumnFill: "row"
-        },
-
+        }
       };
     },
-    props:['iconList'],
-    
+    props: ["iconList"]
   };
 </script>
 
@@ -33,6 +31,10 @@
   @import "@/assets/styles/config.scss";
   .icons {
     width: 100%;
+    padding-bottom: 48%;
+    height: 0;
+    margin-bottom: .3rem;
+    overflow: hidden;
     text-align: center;
     p {
       padding: 0.05rem;

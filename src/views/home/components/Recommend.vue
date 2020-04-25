@@ -25,7 +25,6 @@
   @import "@/assets/styles/config.scss";
 
   .recommend {
-    margin-top: 0.3rem;
     .recommend-title {
       line-height: 0.8rem;
       text-indent: 0.2rem;

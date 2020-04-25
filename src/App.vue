@@ -1,14 +1,23 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <transition>
       <router-view />
-    </keep-alive>
+    </transition>
   </div>
 </template>
 
 <style lang="scss">
-  @import url(//at.alicdn.com/t/font_1779486_akzqo65spun.css);
+  @import url(//at.alicdn.com/t/font_1779486_tjaa787nr4p.css);
   @import "assets/styles/reset.scss";
   @import "assets/styles/border.scss";
   @import "styles/config.scss";
+  .v-enter-active,
+  .v-leace-acitve {
+    transition: all 1s ease;
+  }
+  .v-enter,
+  .v-leave-to {
+    transform: translate3d(0, 0, 100%);
+    opacity: 0;
+  }
 </style>

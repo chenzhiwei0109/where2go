@@ -1,5 +1,6 @@
 $bgColor: #00a0e9;
 $bgNewColor: #027aff;
+
 @mixin ellipsis() {
   overflow: hidden; /*超出部分隐藏*/
   text-overflow: ellipsis; /* 超出部分显示省略号 */

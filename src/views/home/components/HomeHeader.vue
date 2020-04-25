@@ -4,7 +4,7 @@
       <i class="iconfont iconsearch2"></i>
       搜索景点门票
     </div>
-    <div class="header-right">
+    <div class="header-right" @click="goToCity">
       {{nowCity||'北京'}}
       <i class="iconfont iconsanjiaojiantoutriangular"></i>
     </div>
@@ -20,6 +20,11 @@
     computed: {
       nowCity() {
         return this.city + "";
+      }
+    },
+    methods: {
+      goToCity() {
+        this.$router.push("city");
       }
     }
   };
