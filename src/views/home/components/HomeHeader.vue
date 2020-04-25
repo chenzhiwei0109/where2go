@@ -5,7 +5,7 @@
       搜索景点门票
     </div>
     <div class="header-right">
-      三亚
+      {{nowCity||'北京'}}
       <i class="iconfont iconsanjiaojiantoutriangular"></i>
     </div>
   </div>
@@ -13,7 +13,15 @@
 
 <script>
   export default {
-    name: "header"
+    name: "HomeHeader",
+    props: {
+      city: String
+    },
+    computed: {
+      nowCity() {
+        return this.city + "";
+      }
+    }
   };
 </script>
 

@@ -21,55 +21,11 @@
           slidesPerColumn: 2,
           slidesPerColumnFill: "row"
         },
-        iconList: [
-          {
-            id: "0001",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0002",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0003",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0004",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0005",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0006",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0007",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0008",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          },
-          {
-            id: "0009",
-            imgUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-            desc: "一日游"
-          }
-        ]
+
       };
-    }
+    },
+    props:['iconList'],
+    
   };
 </script>
 

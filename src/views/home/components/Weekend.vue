@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="(item, index) in recommendList" :key="index">
+      <li class="item border-bottom" v-for="(item, index) in weekendList" :key="index">
         <div class="wrapper">
           <img class="item-img" v-lazy="item.imgUrl" alt />
         </div>
@@ -18,42 +18,7 @@
 <script>
   export default {
     name: "Weekend",
-    data() {
-      return {
-        recommendList: [
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          }
-        ]
-      };
-    }
+    props: ["weekendList"]
   };
 </script>
 
@@ -78,7 +43,7 @@
     .wrapper {
       height: 0;
       overflow: hidden;
-      padding-bottom: 33.9%;
+      padding-bottom: 37.09%;
       text-align: center;
       img {
         width: 100%;

@@ -17,42 +17,7 @@
 <script>
   export default {
     name: "HomeRecommend",
-    data() {
-      return {
-        recommendList: [
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          },
-          {
-            imgUrl:
-              "https://img1.qunarzz.com/sight/p0/1409/19/61e0055dc73a905ef762765f8d7372a6.jpg_256x160_33247f4f.jpg",
-            title: "济南大明湖",
-            desc: "被誉为“中华民族扬威不屈之地”"
-          }
-        ]
-      };
-    }
+    props:['recommendList']
   };
 </script>
 
@@ -69,7 +34,7 @@
       box-shadow: 0 0 3px 3px rgb(214, 218, 241);
       background: rgb(123, 239, 243);
       background-image: linear-gradient(
-       -20deg,
+        -20deg,
         rgb(123, 243, 169),
         rgb(123, 179, 243),
         rgb(102, 116, 245)
