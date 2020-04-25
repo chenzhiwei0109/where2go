@@ -13,3 +13,8 @@ $bgNewColor: #027aff;
   -webkit-line-clamp: $num;
   -webkit-box-orient: vertical;
 }
+
+@mixin bgColor($deg:90deg) {
+  background: $bgNewColor;
+  background-image: linear-gradient($deg, rgb(243, 171, 123), $bgColor, $bgNewColor, rgb(69, 95, 245));
+}
