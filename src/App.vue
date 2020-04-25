@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
-  @import url(assets/styles/reset.css);
-  @import url(assets/styles/border.css);
-
-
+  @import url(//at.alicdn.com/t/font_1779486_akzqo65spun.css);
+  @import "assets/styles/reset.scss";
+  @import "assets/styles/border.scss";
 </style>
