@@ -1,22 +1,24 @@
 <template>
   <div>
-    <Header></Header>
-    <Swpier></Swpier>
-    <div>test</div>
+    <HomeHeader></HomeHeader>
+    <Swiper></Swiper>
+    <Icons></Icons>
   </div>
 </template>
 
 <script>
-  import Header from "./components/Header";
-  import Swpier from "./components/Swpier";
+  import HomeHeader from "./components/HomeHeader";
+  import Swiper from "./components/Swiper";
+  import Icons from "./components/Icons";
+
   export default {
     name: "home",
     components: {
-      Header,
-      Swpier
+      HomeHeader,
+      Swiper,
+      Icons
     }
   };
 </script>
 <style lang="scss" scoped>
-  
 </style>
