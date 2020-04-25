@@ -3,7 +3,7 @@
     <swiper :options="swiperOptions">
       <swiper-slide v-for="item in iconList" :key="item.id">
         <div>
-          <img :src="item.imgUrl" alt />
+          <img v-lazy="item.imgUrl" alt />
           <p>{{item.desc}}</p>
         </div>
       </swiper-slide>
@@ -77,7 +77,6 @@
   @import "@/assets/styles/config.scss";
   .icons {
     width: 100%;
-    padding-bottom: 50%;
     text-align: center;
     p {
       padding: 0.05rem;
