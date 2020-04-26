@@ -69,7 +69,7 @@
       margin-right: 7px;
       text-align: center;
       padding: 2px 0;
-      color: #999;
+      color: #989;
       font-size: 0.2rem;
       text-decoration: none;
     }
