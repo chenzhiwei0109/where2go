@@ -27,14 +27,19 @@
         </ul>
       </div>
     </div>
+    <Alphabet :cities="listcities"></Alphabet>
   </div>
 </template>
 
 <script>
   import BScroll from "better-scroll";
+  import Alphabet from "./Alphabet";
 
   export default {
     name: "CityList",
+    components: {
+      Alphabet
+    },
     data() {
       return {
         letter: ""

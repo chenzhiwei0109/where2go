@@ -3,7 +3,7 @@
     <CityHeader></CityHeader>
     <CitySearch :cities="cities"></CitySearch>
     <CityList :cities="cities" :hot="hotCities"></CityList>
-    <Alphabet :cities="cities"></Alphabet>
+    <!-- <Alphabet :cities="cities"></Alphabet> -->
   </div>
 </template>
 
@@ -11,7 +11,7 @@
   import CityHeader from "./components/CityHeader";
   import CitySearch from "./components/CitySearch";
   import CityList from "./components/CityList";
-  import Alphabet from "./components/Alphabet";
+  // import Alphabet from "./components/Alphabet";
   import axios from "axios";
   export default {
     name: "City",
@@ -19,7 +19,7 @@
       CityHeader,
       CitySearch,
       CityList,
-      Alphabet
+      // Alphabet
     },
     data() {
       return {
