@@ -3,7 +3,7 @@
     <swiper :options="swiperOptions">
       <swiper-slide v-for="item in iconList" :key="item.id">
         <div>
-          <img v-lazy="item.imgUrl" alt />
+          <img v-lazy="item.imgUrl" alt :key="item.id+20" />
           <p>{{item.desc}}</p>
         </div>
       </swiper-slide>
@@ -30,11 +30,17 @@
 <style lang="scss" scoped>
   @import "./../../../assets/styles/config.scss";
   .icons {
-    margin-top: .3rem;
+    background: rgb(189, 62, 228);
+    background-image: linear-gradient(
+      80deg,
+      rgb(243, 171, 123),
+      rgb(69, 95, 245)
+    );
     width: 100%;
+    padding-top: .3rem;
     padding-bottom: 48%;
     height: 0;
-    margin-bottom: .3rem;
+    box-shadow: 0 .05rem .1rem .1rem rgb(129, 177, 240);
     overflow: hidden;
     text-align: center;
     p {

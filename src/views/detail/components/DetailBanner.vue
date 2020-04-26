@@ -1,24 +1,22 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOptions" v-if="showSwiper &&isKeep">
-      <swiper-slide v-for="swiperItem in list" :key="swiperItem.id">
-        <img class="swiper-img" :src="swiperItem.imgUrl" />
+    <swiper :options="swiperOptions">
+      <swiper-slide>
+        <img
+          class="swiper-img"
+          src="https://img1.qunarzz.com/vs_ceph_vs_tts/f7b3b434-45df-48d6-b3ed-e003fc2abee6.jpg_r_640x420x95_6e57c63d.jpg"
+        />
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
 
 <script>
   export default {
-    name: "HomeSwiper",
+    name: "DetailBanner",
     data() {
       return {
-        isKeep: false,
         swiperOptions: {
-          pagination: {
-            el: ".swiper-pagination"
-          },
           autoplay: {
             delay: 1500,
             //当用户滑动图片后继续自动轮播
@@ -31,20 +29,6 @@
           }
         }
       };
-    },
-    props: {
-      list: Array
-    },
-    computed: {
-      showSwiper() {
-        return this.list.length;
-      }
-    },
-    activated() {
-      this.isKeep = true;
-    },
-    deactivated() {
-      this.isKeep = false;
     }
   };
 </script>
@@ -57,7 +41,6 @@
     overflow: hidden;
 
     padding-bottom: 31.25%; //高度相对宽度
-    --swiper-pagination-color: #027aff;
     .swiper-img {
       width: 100%;
     }

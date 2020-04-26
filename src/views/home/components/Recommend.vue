@@ -7,7 +7,7 @@
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-detail">查看详情</button>
+          <button class="item-detail" @click="goToDetail(item.title)">查看详情</button>
         </div>
       </li>
     </ul>
@@ -17,7 +17,12 @@
 <script>
   export default {
     name: "HomeRecommend",
-    props:['recommendList']
+    props: ["recommendList"],
+    methods: {
+      goToDetail(title) {
+        this.$router.push({ path: "/detail", query: { title } });
+      }
+    }
   };
 </script>
 

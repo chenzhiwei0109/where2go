@@ -14,7 +14,7 @@ import _ from 'lodash'
 Vue.prototype.$bus = new Vue({})
 Vue.prototype._ = _;
 Vue.use(VueLazyLoad, {
-  loading: '/imgs/loading-bars.svg'
+  loading: require('./assets/loading-bars.svg')
 })
 Vue.use(VueAwesomeSwiper)
 
