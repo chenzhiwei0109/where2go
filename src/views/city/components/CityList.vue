@@ -1,21 +1,21 @@
 <template>
   <div class="city-list" ref="wrapper">
-    <div>
+    <div class="content">
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list clearfix">
-          <div class="city">北京</div>
+          <div class="city">济南</div>
         </div>
       </div>
 
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list clearfix">
-          <div class="city" v-for="item of hotCities" :key="item.id">{{item.name}}</div>
+          <div class="city" v-for="item of hot" :key="item.id">{{item.name}}</div>
         </div>
       </div>
 
-      <div class="area" v-for="(items,key) in cities" :key="key">
+      <div class="area" v-for="(items,key) in listcities" :key="key" :ref="key">
         <div class="title code">{{key}}</div>
         <ul class="item-list" v-for="item in items" :key="item.id">
           <li class="item">{{item.name}}</li>
@@ -32,7 +32,7 @@
     name: "CityList",
     data() {
       return {
-        city: ["北京", "北京", "北京", "瓦坎达", "北京", "北京", "北京", "北京"]
+        letter: ""
       };
     },
     props: {
@@ -49,12 +49,25 @@
         }
       }
     },
-    mounted() {
-      this.scroll = new BScroll(this.$refs.wrapper);
-    },
     computed: {
-      hotCities() {
-        return this.hot;
+      listcities() {
+        return this.cities;
+      }
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.scroll = new BScroll(this.$refs.wrapper);
+        this.$bus.$on("changeCode", letter => {
+          this.letter = letter;
+        });
+      });
+    },
+    watch: {
+      letter() {
+        if (this.letter) {
+          let element = this.$refs[this.letter][0];
+          this.scroll.scrollToElement(element);
+        }
       }
     }
   };
@@ -67,6 +80,12 @@
     }
   }
   .city-list {
+    overflow: hidden;
+    position: absolute;
+    top: 1.58rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
     .title {
       margin-top: 0.05rem;
       line-height: 0.44rem;

@@ -4,7 +4,6 @@ import VueLazyLoad from 'vue-lazyload'
 import router from './router'
 import store from './store'
 import fastclick from 'fastclick'
-import './assets/js/rem.js'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueLazyLoad, {
   loading: '/imgs/loading-bars.svg'
@@ -16,7 +15,7 @@ Vue.use(VueAwesomeSwiper)
 
 fastclick.attach(document.body)
 
-
+Vue.prototype.$bus = new Vue({})
 
 new Vue({
   router,
