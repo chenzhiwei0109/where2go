@@ -79,8 +79,12 @@
       },
       handleCityClick(city) {
         this.$store.dispatch("changeCity", city);
+        this.keyword = city;
         this.isShow = false;
-        this.$router.push("/");
+        setTimeout(() => {
+          this.$router.push({ path: "/", query: { city } });
+          this.keyword = "";
+        }, 300);
       }
     }
   };

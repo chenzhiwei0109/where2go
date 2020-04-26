@@ -82,7 +82,7 @@
     methods: {
       handleCityClick(city) {
         this.$store.commit("changeCity", city);
-        this.$router.push('/')
+        this.$router.push({ path: "/", query: { city } });
       }
     }
   };
