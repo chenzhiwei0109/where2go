@@ -4,21 +4,26 @@
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list clearfix">
-          <div class="city">济南</div>
+          <div class="city">{{$store.state.city}}</div>
         </div>
       </div>
 
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list clearfix">
-          <div class="city" v-for="item of hot" :key="item.id">{{item.name}}</div>
+          <div
+            class="city"
+            v-for="item of hot"
+            :key="item.id"
+            @click="handleCityClick(item.name)"
+          >{{item.name}}</div>
         </div>
       </div>
 
       <div class="area" v-for="(items,key) in listcities" :key="key" :ref="key">
         <div class="title code">{{key}}</div>
         <ul class="item-list" v-for="item in items" :key="item.id">
-          <li class="item">{{item.name}}</li>
+          <li class="item" @click="handleCityClick(item.name)">{{item.name}}</li>
         </ul>
       </div>
     </div>
@@ -70,14 +75,19 @@
       letter() {
         if (this.letter) {
           let element = this.$refs[this.letter][0];
-          this.scroll.scrollToElement(element,1000);
+          this.scroll.scrollToElement(element, 1000);
         }
+      }
+    },
+    methods: {
+      handleCityClick(city) {
+        this.$store.dispatch("changeCity", city);
       }
     }
   };
 </script>
 <style lang="scss" scoped>
-  @import "~styles/config.scss";
+  @import "~@/assets/styles/config.scss";
   .border-topbottom {
     &::before {
       border-color: #ccc;

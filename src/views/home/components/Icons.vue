@@ -28,7 +28,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/styles/config.scss";
+  @import "~@/assets/styles/config.scss";
   .icons {
     margin-top: .3rem;
     width: 100%;

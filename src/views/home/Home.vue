@@ -43,7 +43,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get("/api/index.json").then(res => {
+        axios.get("./mock/index.json").then(res => {
           let datas = res.data;
           if (datas.ret && datas.data) {
             const data = datas.data;

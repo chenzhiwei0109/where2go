@@ -16,7 +16,7 @@ Vue.use(VueLazyLoad, {
 })
 Vue.use(VueAwesomeSwiper)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 fastclick.attach(document.body)
 

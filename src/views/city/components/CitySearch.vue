@@ -4,11 +4,16 @@
       <input class="search-input" placeholder="请输入你想去的城市" v-model="keyword" />
     </div>
     <transition name="fade" mode="in-out">
-      <div class="search-content" v-show="isShow" ref="search">
-        <ul>
-          <li v-for="(item,index) in list" class="item border-bottom" :key="index">{{item.name}}</li>
-          <li class="item border-bottom" v-show="undefin">未匹配数据</li>
-        </ul>
+      <div class="search-content wrapper" ref="wrapper" v-show="isShow">
+        <div>
+          <div
+            v-for="(item,index) in list"
+            class="item border-bottom"
+            @click.stop="handleCityClick(item.name)"
+            :key="index"
+          >{{item.name}}</div>
+          <div class="item border-bottom" v-show="undefin">未匹配数据</div>
+        </div>
       </div>
     </transition>
   </div>
@@ -43,11 +48,14 @@
         return !this.list.length;
       }
     },
-    created() {
-      this.debouncedGetAnswer = this._.debounce(this.getSearch, 100);
-    },
+
     mounted() {
-      this.scroll = new BScroll(this.$refs.search);
+      this.scroll = new BScroll(this.$refs.wrapper, {
+        click: true,
+        taps: true
+      });
+
+      this.debouncedGetAnswer = this._.debounce(this.getSearch, 100);
     },
     methods: {
       getSearch() {
@@ -68,13 +76,18 @@
         } else {
           this.isShow = false;
         }
+      },
+      handleCityClick(city) {
+        this.$store.dispatch("changeCity", city);
+        this.isShow = false;
+        this.$router.push("/");
       }
     }
   };
 </script>
 <style lang="scss" scoped>
-  @import "~styles/config.scss";
-  @import "~styles/border.scss";
+  @import "~@/assets/styles/config.scss";
+  @import "~@/assets/styles/border.scss";
   .search {
     @include bgColor(50deg);
     height: 0.72rem;
@@ -94,7 +107,7 @@
   }
   .search-content {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     background: #fff;
     z-index: 1;
     top: 1.58rem;

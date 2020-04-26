@@ -5,7 +5,7 @@
       搜索景点门票
     </div>
     <div class="header-right" @click="goToCity">
-      {{nowCity||'北京'}}
+      {{this.$store.state.city}}
       <i class="iconfont iconsanjiaojiantoutriangular"></i>
     </div>
   </div>
@@ -14,14 +14,7 @@
 <script>
   export default {
     name: "HomeHeader",
-    props: {
-      city: String
-    },
-    computed: {
-      nowCity() {
-        return this.city + "";
-      }
-    },
+
     methods: {
       goToCity() {
         this.$router.push("city");
@@ -31,7 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/styles/config.scss";
+  @import "~@/assets/styles/config.scss";
 
   .header {
     line-height: 0.86rem;

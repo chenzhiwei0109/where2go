@@ -2,7 +2,7 @@
   <ul class="list">
     <li
       @click="charClick"
-      @touchstart.prevent="startTouch"
+      @touchstart="startTouch"
       @touchmove="moveTouch"
       @touchend="endTouch"
       :ref="item"

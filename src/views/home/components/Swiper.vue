@@ -42,7 +42,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "@/assets/styles/config.scss";
+  @import "~@/assets/styles/config.scss";
 
   .wrapper {
     width: 100%;

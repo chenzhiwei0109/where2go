@@ -1,12 +1,5 @@
 module.exports = {
-  configureWebpack: {
-    resolve: {
-      alias: {
-        'styles': '@/assets/styles',
-        'views': '@/views'
-      }
-    }
-  },
+
   devServer: {
     host: 'localhost',
     port: 8080,
