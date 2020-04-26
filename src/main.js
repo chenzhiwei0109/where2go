@@ -5,8 +5,10 @@ import router from './router'
 import store from './store'
 import fastclick from 'fastclick'
 import 'swiper/css/swiper.css'
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import _ from 'lodash'
+
 
 
 Vue.prototype.$bus = new Vue({})
@@ -16,7 +18,7 @@ Vue.use(VueLazyLoad, {
 })
 Vue.use(VueAwesomeSwiper)
 
-Vue.config.productionTip = true
+Vue.config.productionTip = false
 
 fastclick.attach(document.body)
 

@@ -86,8 +86,8 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "~@/assets/styles/config.scss";
-  @import "~@/assets/styles/border.scss";
+  @import "./../../../assets/styles/config.scss";
+  @import "./../../../assets/styles/border.scss";
   .search {
     @include bgColor(50deg);
     height: 0.72rem;

@@ -24,7 +24,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "~@/assets/styles/config.scss";
+  @import "./../../../assets/styles/config.scss";
 
   .header {
     line-height: 0.86rem;
