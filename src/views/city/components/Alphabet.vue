@@ -69,7 +69,7 @@
 <style lang="scss" scoped>
   .list {
     position: fixed;
-    top: 1.28rem;
+    top: 1.58rem;
     right: 0;
     bottom: 0;
     width: 0.4rem;

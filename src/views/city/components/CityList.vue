@@ -56,7 +56,11 @@
     },
     mounted() {
       this.$nextTick(() => {
-        this.scroll = new BScroll(this.$refs.wrapper);
+        this.scroll = new BScroll(this.$refs.wrapper, {
+          probeType: 3, //滚动检测,2是只检测触摸时
+          click: true, //div也可以点击
+          momentum: true
+        });
         this.$bus.$on("changeCode", letter => {
           this.letter = letter;
         });
@@ -66,7 +70,7 @@
       letter() {
         if (this.letter) {
           let element = this.$refs[this.letter][0];
-          this.scroll.scrollToElement(element);
+          this.scroll.scrollToElement(element,1000);
         }
       }
     }
