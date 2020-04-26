@@ -1,8 +1,9 @@
 <template>
   <div>
     <HomeHeader :city="city"></HomeHeader>
-    <Swiper :list="swiperList"></Swiper>
     <Icons :iconList="iconList"></Icons>
+    <Swiper :list="swiperList"></Swiper>
+
     <Recommend :recommendList="recommendList"></Recommend>
     <Weekend :weekendList="weekendList"></Weekend>
     <footer>
@@ -61,7 +62,7 @@
   footer {
     line-height: 22px;
     padding: 7px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     text-align: center;
 
     span {

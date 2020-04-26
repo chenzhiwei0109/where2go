@@ -1,11 +1,11 @@
 <template>
   <div>
-      <div class="header">
-        <div>
-          <i class="iconfont iconback" @click="$router.push('/')"></i>
-          <span>城市选择</span>
-        </div>
+    <div class="header">
+      <div>
+        <i class="iconfont iconback" @click="$router.push('/')"></i>
+        <span>城市选择</span>
       </div>
+    </div>
   </div>
 </template>
 
@@ -38,6 +38,7 @@
       position: absolute;
       box-sizing: border-box;
       left: 0.1rem;
+      font-size: 0.26rem;
     }
   }
 </style>

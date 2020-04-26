@@ -30,6 +30,7 @@
 <style lang="scss" scoped>
   @import "@/assets/styles/config.scss";
   .icons {
+    margin-top: .3rem;
     width: 100%;
     padding-bottom: 48%;
     height: 0;

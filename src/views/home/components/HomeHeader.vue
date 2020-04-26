@@ -43,7 +43,7 @@
       $bgNewColor,
       rgb(69, 95, 245)
     );
-    box-shadow: 0 4px 4px 1px $bgNewColor;
+    box-shadow: 0 4px 4px 1px rgb(145, 168, 243);
     display: flex;
     white-space: nowrap;
     &-left {

@@ -5,7 +5,9 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: "CitySearch"
+  };
 </script>
 <style lang="scss" scoped>
   @import "~styles/config.scss";
