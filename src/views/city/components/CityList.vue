@@ -11,18 +11,14 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list clearfix">
-          <div class="city" v-for="(item, index) in city" :key="index">{{item||北京}}</div>
+          <div class="city" v-for="item of hotCities" :key="item.id">{{item.name}}</div>
         </div>
       </div>
 
-      <div class="area" v-for="index in 8" :key="index">
-        <div class="title code">A</div>
-        <ul class="item-list">
-          <li class="item">瓦坎达</li>
-          <li class="item">瓦坎达</li>
-          <li class="item">瓦坎达</li>
-          <li class="item">瓦坎达</li>
-          <li class="item">瓦坎达</li>
+      <div class="area" v-for="(items,key) in cities" :key="key">
+        <div class="title code">{{key}}</div>
+        <ul class="item-list" v-for="item in items" :key="item.id">
+          <li class="item">{{item.name}}</li>
         </ul>
       </div>
     </div>
@@ -39,9 +35,27 @@
         city: ["北京", "北京", "北京", "瓦坎达", "北京", "北京", "北京", "北京"]
       };
     },
-
+    props: {
+      hot: {
+        type: Array,
+        default() {
+          return [];
+        }
+      },
+      cities: {
+        type: Object,
+        default() {
+          return {};
+        }
+      }
+    },
     mounted() {
       this.scroll = new BScroll(this.$refs.wrapper);
+    },
+    computed: {
+      hotCities() {
+        return this.hot;
+      }
     }
   };
 </script>
