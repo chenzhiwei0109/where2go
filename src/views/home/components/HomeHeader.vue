@@ -59,7 +59,7 @@
 
     &-right {
       min-width: 1.04rem;
-      padding: 0 0.1rem;
+      padding: 0 0.2rem;
       float: right;
       text-align: center;
       color: #fff;

@@ -24,10 +24,10 @@
         }
       };
     },
-    activated() {
+    created() {
       window.addEventListener("scroll", this.handleScroll);
     },
-    deactivated() {
+    destoryed() {
       window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
@@ -36,7 +36,7 @@
       },
       handleScroll() {
         const top = document.documentElement.scrollTop;
-        if (top > 69) {
+        if (top > 10) {
           this.isColor = true;
         } else {
           this.isColor = false;

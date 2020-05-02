@@ -3,7 +3,6 @@
     <HomeHeader :city="city"></HomeHeader>
     <Icons :iconList="iconList"></Icons>
     <Swiper :list="swiperList"></Swiper>
-
     <Recommend :recommendList="recommendList"></Recommend>
     <Weekend :weekendList="weekendList"></Weekend>
     <Footer></Footer>

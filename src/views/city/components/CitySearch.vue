@@ -48,7 +48,9 @@
         return !this.list.length;
       }
     },
-
+    updated() {
+      this.scroll.refresh();
+    },
     mounted() {
       this.scroll = new BScroll(this.$refs.wrapper, {
         click: true,
@@ -78,13 +80,9 @@
         }
       },
       handleCityClick(city) {
-        this.$store.dispatch("changeCity", city);
-        this.keyword = city;
-        this.isShow = false;
-        setTimeout(() => {
-          this.$router.push({ path: "/", query: { city } });
-          this.keyword = "";
-        }, 300);
+        this.$store.commit("changeCity", city);
+        this.keyword = "";
+        this.$router.push("/");
       }
     }
   };
